@@ -90,6 +90,6 @@ Assignee: Kathleen
 Status: Not Started
 
 ### Team video
-Assignee:
+Assignee: Agnes
 
 Status: Not Started
