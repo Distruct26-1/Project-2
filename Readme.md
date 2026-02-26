@@ -2,13 +2,13 @@
 
 ## Project Links
 
-03-20 - [https://slcc.instructure.com/courses/1235395/assignments/17800160/](Overall Assignment)
+03-20 - [Overall Assignment](https://slcc.instructure.com/courses/1235395/assignments/17800160/)
 
-03-06 - [https://slcc.instructure.com/courses/1235395/assignments/17800177/](Project Checkpoint)
+03-06 - [Project Checkpoint](https://slcc.instructure.com/courses/1235395/assignments/17800177/)
 
-02-27 - [https://slcc.instructure.com/courses/1235395/assignments/17800179/](Weekly Status Report 1)  
-03-06 - [https://slcc.instructure.com/courses/1235395/assignments/17800180/](Weekly Status Report 2)  
-03-20 - [https://slcc.instructure.com/courses/1235395/assignments/17800181/](Weekly Status Report 3)
+02-27 - [Weekly Status Report 1](https://slcc.instructure.com/courses/1235395/assignments/17800179/)  
+03-06 - [Weekly Status Report 2](https://slcc.instructure.com/courses/1235395/assignments/17800180/)  
+03-20 - [Weekly Status Report 3](https://slcc.instructure.com/courses/1235395/assignments/17800181/)
 
 ## Build Instructions
 
