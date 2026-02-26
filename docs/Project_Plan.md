@@ -30,7 +30,7 @@
 - Final submission due
 - Submission turned in by communication lead
 
-====================================================================================
+------------------------------------------------------------
 
 ## File Requirements
 - Must include task ownership and status
@@ -60,7 +60,7 @@ Assignee: Cristian
 Status: Not Started
 
 ### JUnit test suite
-Assignee:
+Assignee: Dallin
 
 Status: Not Started
 
@@ -70,7 +70,7 @@ Assignee: Kathleen
 Status: Not Started
 
 ### Design notes
-Assignee: Kathleen
+Assignee: Kathleen & Dallin
 
 Status: Not Started
 
