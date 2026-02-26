@@ -45,7 +45,7 @@ Assignee: Cristian
 Status: In Progress
 
 ### SetOperations.java
-Assignee:
+Assignee: Agnes
 
 Status: Not Started
 
