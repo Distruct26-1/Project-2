@@ -70,7 +70,7 @@ Assignee: Kathleen
 Status: Not Started
 
 ### Design notes
-Assignee: Kathleen & Dallin
+Assignee: Kathleen
 
 Status: Not Started
 
@@ -80,7 +80,7 @@ Assignee: Kathleen
 Status: In 
 
 ### Discussion questions (6 analysis questions)
-Assignee: 
+Assignee: Dallin
 
 Status: Not Started
 
