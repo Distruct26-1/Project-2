@@ -6,34 +6,34 @@ import java.util.List;
 public class UniversalSet {
 	
 	//List of drinks
-	private List<String> drinks;
+	private List<String> ingredients;
 	
 	//Constructor Method
 	
-	public UniversalSet(List<String> drinks) {
+	public UniversalSet(List<String> ingredients) {
 		
-		this.drinks = new ArrayList<>();
+		this.ingredients = new ArrayList<>();
 		
-		for (int i=0; i < drinks.size(); i++) {
-			String name = drinks.get(i);
+		for (int i=0; i < ingredients.size(); i++) {
+			String name = ingredients.get(i);
 			
-			this.drinks.add(name);	
+			this.ingredients.add(name);	
 		}
 	}
 	
 	//Returns number of drinks in Universal Set
 	public int size() {
-		return drinks.size();
+		return ingredients.size();
 	}
 	
 	//Returns list of elements in Universal Set
 	public List<String> getDrinks() {
-		return new ArrayList<>(drinks);	
+		return new ArrayList<>(ingredients);	
 	}
 
 	@Override
 	public String toString() {
-		return "UniversalSet drinks=" + drinks;
+		return "UniversalSet ingredients=" + ingredients;
 	}
 	
 }
