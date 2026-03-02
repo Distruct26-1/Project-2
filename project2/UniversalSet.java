@@ -21,14 +21,20 @@ public class UniversalSet {
 		}
 	}
 	
-	//Returns number of drinks in Universal Set
+	//Returns number of ingredients in Universal Set
 	public int size() {
 		return ingredients.size();
 	}
 	
-	//Returns list of elements in Universal Set
-	public List<String> getDrinks() {
+	//Returns list of ingredients in Universal Set
+	public List<String> getIngredients() {
 		return new ArrayList<>(ingredients);	
+	}
+	
+	//Returns index of element in Universe
+	public int indexOf(String IngredientsName) {
+		int index = ingredients.indexOf(IngredientsName);
+		return index;
 	}
 
 	@Override
