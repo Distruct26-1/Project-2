@@ -17,7 +17,6 @@ public class UniversalSet {
 	private List<String> ingredients;
 	
 	//Constructor Method
-	
 	public UniversalSet(List<String> ingredients) {
 		
 		this.ingredients = new ArrayList<>();
