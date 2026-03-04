@@ -1,3 +1,11 @@
+/*
+Team Name: The Penguins
+Team Members: Agnes Braz Franco, Cristian Taylor, Dallin Yauney, Kathleen Monahan
+Course: CS 2430
+Semester: Spring 2026
+Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
+*/
+
 package project2;
 
 import java.util.ArrayList;
@@ -20,7 +28,7 @@ public class OrdinarySets {
 		this.contains = new boolean[ingredients.size()];
 	}
 	
-	public OrdinarySets(UniversalSet Ingredients, boolean[] initialIngredients) {
+	public OrdinarySets(UniversalSet ingredients, boolean[] initialIngredients) {
 		this.ingredients = ingredients;
 		this.contains = Arrays.copyOf(initialIngredients, initialIngredients.length);
 	}
@@ -65,6 +73,50 @@ public class OrdinarySets {
 		}
 		
 		return new OrdinarySets(ingredients, bitArray);
+	}
+	
+	public OrdinarySets union(OrdinarySets other) {
+
+	    boolean[] result = new boolean[contains.length];
+
+	    for (int i = 0; i < contains.length; i++) {
+	        result[i] = this.contains[i] || other.contains[i];
+	    }
+
+	    return new OrdinarySets(ingredients, result);
+	}
+	
+	public OrdinarySets intersection(OrdinarySets other) {
+
+	    boolean[] result = new boolean[contains.length];
+
+	    for (int i = 0; i < contains.length; i++) {
+	        result[i] = this.contains[i] && other.contains[i];
+	    }
+
+	    return new OrdinarySets(ingredients, result);
+	}
+
+	public OrdinarySets difference(OrdinarySets other) {
+
+	    boolean[] result = new boolean[contains.length];
+
+	    for (int i = 0; i < contains.length; i++) {
+	        result[i] = this.contains[i] && !other.contains[i];
+	    }
+
+	    return new OrdinarySets(ingredients, result);
+	}
+
+	public OrdinarySets symmetricDifference(OrdinarySets other) {
+
+	    boolean[] result = new boolean[contains.length];
+
+	    for (int i = 0; i < contains.length; i++) {
+	        result[i] = this.contains[i] ^ other.contains[i];
+	    }
+
+	    return new OrdinarySets(ingredients, result);
 	}
 
 }

@@ -1,3 +1,11 @@
+/*
+Team Name: The Penguins
+Team Members: Agnes Braz Franco, Cristian Taylor, Dallin Yauney, Kathleen Monahan
+Course: CS 2430
+Semester: Spring 2026
+Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
+*/
+
 package project2;
 
 import java.util.ArrayList;
