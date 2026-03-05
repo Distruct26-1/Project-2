@@ -47,7 +47,7 @@ Status: In Progress
 ### SetOperations.java
 Assignee: Agnes
 
-Status: Not Started
+Status: Completed
 
 ### MultisetOperations.java
 Assignee: Cristian
