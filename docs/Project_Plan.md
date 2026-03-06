@@ -42,22 +42,31 @@
 ### Repository setup + instructor access
 Assignee: Cristian
 
-Status: In Progress
+Status: Done
+https://github.com/Distruct26-1/Project-2
 
-### SetOperations.java
+### OrdinarySet.java
 Assignee: Agnes
 
-Status: Completed
+Status: Done
+https://github.com/Distruct26-1/Project-2/commit/872f7a7
 
-### MultisetOperations.java
+### UniversalSet.java
+Assignee: Agnes
+
+Status: Done
+https://github.com/Distruct26-1/Project-2/commit/362a889
+
+### MultiSets.java
 Assignee: Cristian
 
-Status: Not Started
+Status: Done
+https://github.com/Distruct26-1/Project-2/commit/64dc5a5
 
-### Driver.java
+### Main.java
 Assignee: Cristian
 
-Status: Not Started
+Status: In progress
 
 ### JUnit test suite
 Assignee: Dallin
@@ -67,17 +76,25 @@ Status: Not Started
 ### UML diagram
 Assignee: Kathleen
 
-Status: Not Started
+Status: Done
+https://github.com/Distruct26-1/Project-2/blob/main/docs/project2uml.png
 
-### Design notes
+### Scope Document
 Assignee: Kathleen
 
-Status: Not Started
+Status: Done
+https://github.com/Distruct26-1/Project-2/blob/main/docs/Scope.md
 
 ### Project plan 
 Assignee: Kathleen
 
-Status: In 
+Status: Done
+https://github.com/Distruct26-1/Project-2/blob/main/docs/Project_Plan.md
+
+### Checkpoint 
+Assignee: Kathleen 
+
+Status: In Progress
 
 ### Discussion questions (6 analysis questions)
 Assignee: Dallin
@@ -87,9 +104,11 @@ Status: Not Started
 ### Final report
 Assignee: Kathleen
 
-Status: Not Started
+Status: In progress
 
 ### Team video
 Assignee: 
+
+Status: Not Started
 
 Status: Not Started
