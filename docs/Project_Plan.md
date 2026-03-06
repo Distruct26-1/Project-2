@@ -1,6 +1,27 @@
 # Project Plan 
 ## Project 2 Set Operations
 
+## Project Information
+• Course: CS 2430
+   
+• Project: Project 2 Team 3
+
+• Team Name: Team Penguins
+
+• Start Date: 02.23.26
+
+• Due Date: 03.20.26
+
+• Checkpoint Date (mid-project): 03.06.26
+
+## Roles
+| Team Member | Role |
+|---|---|
+| Cristian | Implementation Lead |
+| Agnes | Co-Implementation Lead |
+| Dallin | Verification Lead |
+| Kathleen | Communications Lead |
+
 ## Schedule
 
 ### Week of Feb 25
@@ -31,6 +52,15 @@
 - Submission turned in by communication lead
 
 ------------------------------------------------------------
+
+## Milestones
+| Milestone | Target Date | Owner | Definition of Done | Status |
+|---|---|---|---|---|
+| Repo set up | Feb 23 | Cristian | Repo created, instructor access granted | Done |
+| Core code complete | Mar 3 | Cristian/Agnes | All classes compile and run end-to-end | Done |
+| Checkpoint | Mar 6 | Kathleen | /docs has plan + 2 artifacts, repo URL submitted | Done |
+| JUnit tests complete | Mar 8 | Dallin | Edge cases covered, results documented | In Progress |
+| Final submission | Mar 20 | Kathleen/Dallin/Cristian | Report, video, code packaged and submitted | Not Started |
 
 ## File Requirements
 - Must include task ownership and status
@@ -71,7 +101,7 @@ Status: In progress
 ### JUnit test suite
 Assignee: Dallin
 
-Status: Not Started
+Status: In progress
 
 ### UML diagram
 Assignee: Kathleen
@@ -107,8 +137,14 @@ Assignee: Kathleen
 Status: In progress
 
 ### Team video
-Assignee: 
+Assignee: Cristian
 
 Status: Not Started
 
-Status: Not Started
+## Update Log
+| Date | Summary | Link |
+|---|---|---|
+| Feb 23 | Team kickoff, repo created, roles confirmed | https://github.com/Distruct26-1/Project-2 |
+| Mar 3 | All classes runnable and pushed. OrdinarySets, UniversalSet, MultiSets, Main | https://github.com/Distruct26-1/Project-2/commit/64dc5a5 |
+| Mar 5 | UML doc added to /docs; | https://github.com/Distruct26-1/Project-2/blob/main/docs/project2uml.png |
+| Mar 6 | Scope doc added to /docs; checkpoint submitted | https://github.com/Distruct26-1/Project-2/blob/main/docs/Scope.md |
