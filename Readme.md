@@ -12,4 +12,8 @@
 
 ## Build Instructions
 
-This project is run through the Driver, and can be executed as such: `java src\Project2\Driver.java` (or `java src/Project2/Driver.java` for Mac/Linux)
+The entry point is Main.java in the project2 package. Import the project into your preferred IDE and run Main.java. 
+
+This project requires the Google Guava library. Make sure it is added to your classpath before running.
+
+
