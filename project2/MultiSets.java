@@ -1,3 +1,11 @@
+/*
+Team Name: The Penguins
+Team Members: Agnes Braz Franco, Cristian Taylor, Dallin Yauney, Kathleen Monahan
+Course: CS 2430
+Semester: Spring 2026
+Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
+*/
+
 package project2;
 
 import java.util.Arrays;
@@ -60,13 +68,11 @@ public class MultiSets {
 		int sub;
 		
 		for(int i = 0; i < 12; i++) {
-			if(orderB.contains(check.get(i))) {
-				sub = orderA.count(check.get(i)) - orderB.count(check.get(i));
-				if(sub < 0 ) {
-					sub = 0;
-				}
-				diff.add(check.get(i), sub);
+			sub = orderA.count(check.get(i)) - orderB.count(check.get(i));
+			if(sub < 0 ) {
+				sub = 0;
 			}
+			diff.add(check.get(i), sub);
 		}
 		
 		return diff;
@@ -92,7 +98,7 @@ public class MultiSets {
 		Multiset<String> SunBrunchOrder = HashMultiset.create(orderB);
 		Multiset<String> StoneColdOrder = HashMultiset.create(orderSC);
 		
-		Multiset<String> tester = HashMultiset.create(sum(StoneColdOrder, SunBrunchOrder));
+		Multiset<String> tester = HashMultiset.create(difference(StoneColdOrder, SunBrunchOrder));
 		
 		
 		
