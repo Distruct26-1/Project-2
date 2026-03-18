@@ -9,6 +9,10 @@ Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
 package project2;
 
 import java.util.Arrays;
+import java.util.List;
+
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
 
 public class Main {
 
@@ -104,5 +108,69 @@ public class Main {
 		System.out.println("Bits: " + symDiff.toBitsIngredients());
 		System.out.println("Ingredients: " + symDiff.toIngredientsList());
 		
+		// =======================
+		// Multi Set Operations
+		// =======================
+		
+		System.out.println("\n===== Ordinary Set Operations =====");
+		
+		
+		//Order Creation
+		//Order A is a large order at a bar on  a Saturday Night
+		//Order B is a large order during a Sunday Brunch
+		//The Stone Cold order is an Order made by Stone Cold Steve Austin
+		List<String> orderA = Arrays.asList("Beer", "Beer","Beer", "Beer", "Bloody Mary", "IPA", "IPA", "Diet Coke", "Margarita", "Margarita", "Lager", "Lager", "Lager", "Lager");
+		List<String> orderB = Arrays.asList("Rose", "Rose", "Margarita", "Diet Coke", "Diet Coke","Diet Coke", "Diet Coke", "Sparkling Water" , "Sparkling Water", "Mimosa", "Mimosa", "Chardonnay");
+		List<String> orderSC = Arrays.asList("Beer", "Beer", "Beer", "Beer", "Beer", "Beer", "Beer", "Beer", "Beer", "Bloody Mary");
+		Multiset<String> SatNightOrder = HashMultiset.create(orderA);
+		Multiset<String> SunBrunchOrder = HashMultiset.create(orderB);
+		Multiset<String> StoneColdOrder = HashMultiset.create(orderSC);
+		
+		
+		// Print Saturday Night Order
+		System.out.println("\nSaturday Night Order:");
+		System.out.println("Order: " + SatNightOrder);
+
+
+		// Print Sunday Brunch Order
+		System.out.println("\nSunday Brunch Order:");
+		System.out.println("Order: " + SunBrunchOrder);
+		
+		// Print The Stone Cold Order
+		System.out.println("\nStone Cold Order :");
+		System.out.println("Order: " + StoneColdOrder);
+		
+		//Union
+		//Takes the maximum count between both multisets
+		Multiset<String> tester = HashMultiset.create(MultiSets.union(SatNightOrder, SunBrunchOrder));
+		
+		System.out.println("\nUnion:");
+		System.out.println("Union returns an order with the maximum value of each drink");
+		System.out.println("Order: " + tester);
+		
+		//Union
+		//Takes the maximum count between both multisets
+		Multiset<String> tester1 = HashMultiset.create(MultiSets.intersection(SatNightOrder, SunBrunchOrder));
+		
+		System.out.println("\nIntersection:");
+		System.out.println("Intersectn returns an order with the minimum value of each drink");
+		System.out.println("Order: " + tester1);
+		
+		//Union
+		//Takes the maximum count between both multisets
+		Multiset<String> tester2 = HashMultiset.create(MultiSets.difference(SatNightOrder, SunBrunchOrder));
+		
+		System.out.println("\nDifference:");
+		System.out.println("Difference subtracts one of the orders from the othe, but doesn't go less than zero");
+		System.out.println("This example subtracts The Sunday Brunch from the Saturday Night");
+		System.out.println("Order: " + tester2);
+		
+		//Union
+		//Takes the maximum count between both multisets
+		Multiset<String> tester3 = HashMultiset.create(MultiSets.sum(SatNightOrder, SunBrunchOrder));
+		
+		System.out.println("\nSum:");
+		System.out.println("Sum adds the two orders together making one giant order");
+		System.out.println("Order: " + tester3);
 	}
 }
