@@ -37,6 +37,11 @@ public class Main {
 		
 		OrdinarySets Margarita = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList("lime juice", "simple syrup", "tequila"));
 		
+		// Creating Set C.
+		// This represents the ingredients used in the drink Vodka Tonic.
+		
+		OrdinarySets VodkaTonic = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList("vodka", "tonic water", "lime juice"));
+		
 		// Printing the universal set so we know the order of the ingredients.
         // The order matters because each position corresponds to a bit in the bit string.
 		
@@ -53,11 +58,17 @@ public class Main {
 		System.out.println("Bit representation: " + Margarita.toBitsIngredients());
 		System.out.println("Ingredients: " + Margarita.toIngredientsList());
 		
+		// Print Vodka Tonic set (SET C)
+		System.out.println("\nVodka Tonic:");
+		System.out.println("Bit representation: " + VodkaTonic.toBitsIngredients());
+		System.out.println("Ingredients: " + VodkaTonic.toIngredientsList());
+		
 		// =======================
 		// Ordinary Set Operations
 		// =======================
 
 		System.out.println("\n===== Ordinary Set Operations =====");
+		System.out.println("\n===== First Test Case =====");
 
 		// Complement
 		// Returns everything that is NOT in the Old Fashioned cocktail
@@ -108,11 +119,59 @@ public class Main {
 		System.out.println("Bits: " + symDiff.toBitsIngredients());
 		System.out.println("Ingredients: " + symDiff.toIngredientsList());
 		
+		//SECOND TEST CASE
+		
+		System.out.println("\n===== Second Test Case =====");
+
+		// Complement
+		OrdinarySets notVodkaTonic = VodkaTonic.complement();
+
+		System.out.println("\nComplement (NOT VodkaTonic):");
+		System.out.println("Complement returns all ingredients that are NOT in the Vodka Tonic.");
+		System.out.println("Bits: " + notVodkaTonic.toBitsIngredients());
+		System.out.println("Ingredients: " + notVodkaTonic.toIngredientsList());
+
+
+		// Union
+		OrdinarySets union2 = VodkaTonic.union(Margarita);
+
+		System.out.println("\nUnion (VodkaTonic ∪ Margarita):");
+		System.out.println("Union returns all ingredients that appear in either drink.");
+		System.out.println("Bits: " + union2.toBitsIngredients());
+		System.out.println("Ingredients: " + union2.toIngredientsList());
+
+
+		// Intersection
+		OrdinarySets intersection2 = VodkaTonic.intersection(Margarita);
+
+		System.out.println("\nIntersection (VodkaTonic ∩ Margarita):");
+		System.out.println("Intersection returns only the ingredients both drinks share.");
+		System.out.println("Bits: " + intersection2.toBitsIngredients());
+		System.out.println("Ingredients: " + intersection2.toIngredientsList());
+
+
+		// Difference (A - B)
+		OrdinarySets difference2 = VodkaTonic.difference(Margarita);
+
+		System.out.println("\nDifference (VodkaTonic − Margarita):");
+		System.out.println("Difference returns ingredients in Vodka Tonic that are not in Margarita.");
+		System.out.println("Bits: " + difference2.toBitsIngredients());
+		System.out.println("Ingredients: " + difference2.toIngredientsList());
+
+
+		// Symmetric Difference
+		OrdinarySets symDiff2 = VodkaTonic.symmetricDifference(Margarita);
+
+		System.out.println("\nSymmetric Difference (VodkaTonic ⊕ Margarita):");
+		System.out.println("Symmetric difference returns ingredients that appear in only one drink.");
+		System.out.println("Bits: " + symDiff2.toBitsIngredients());
+		System.out.println("Ingredients: " + symDiff2.toIngredientsList());
+		
 		// =======================
 		// Multi Set Operations
 		// =======================
 		
-		System.out.println("\n===== Ordinary Set Operations =====");
+		System.out.println("\n===== Multiset Operations =====");
 		
 		
 		//Order Creation
@@ -153,7 +212,7 @@ public class Main {
 		Multiset<String> tester1 = HashMultiset.create(MultiSets.intersection(SatNightOrder, SunBrunchOrder));
 		
 		System.out.println("\nIntersection:");
-		System.out.println("Intersectn returns an order with the minimum value of each drink");
+		System.out.println("Intersection returns an order with the minimum value of each drink");
 		System.out.println("Order: " + tester1);
 		
 		//Union
