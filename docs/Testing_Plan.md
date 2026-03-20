@@ -18,3 +18,5 @@ However, the string representation of the multisets we're using don't explicitly
 `[Beer x 3, Water, Diet Coke x 2]`
 
 This makes testing for, in the above example, a single water, tricky. I can't put a `Water x 1` in the tests, since that doesn't work, and just testing for `Water` as a substring only shows that it's in there somewhere, but not that there's only one of it. My solution is to test for the comma afterwards, as in `Water,` and hope that it never shows at the very end where there's no comma.
+
+Unfortunately, I didn't have the same order-agnostic foresight for the standard sets, so unless their test cases get rewritten, they're subject to panic when an ordering changes in set operations.

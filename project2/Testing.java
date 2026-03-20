@@ -1,5 +1,3 @@
-// package project2;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -26,26 +24,6 @@ public class Testing {
         ));
     }
 
-    // @Test
-    // public void sanityCheck() {
-	// 	OrdinarySets oldFashioned = OrdinarySets.fromIngredients(universe, Arrays.asList(
-	// 		"simple syrup",
-	// 		"bitters",
-	// 		"whiskey"
-	// 	));
-
-	// 	OrdinarySets margarita = OrdinarySets.fromIngredients(universe, Arrays.asList(
-	// 		"lime juice",
-	// 		"simple syrup",
-	// 		"tequila"
-	// 	));
-
-    //     OrdinarySets union = oldFashioned.union(margarita);
-    //     assertIterableEquals(union.toIngredientsList(), Arrays.asList(
-    //         "lime juice", "simple syrup", "bitters", "whiskey", "tequila"
-    //     ));
-    // }
-    
     @Test
     public void setComplementNormal() {
 		OrdinarySets oldFashioned = OrdinarySets.fromIngredients(universe, Arrays.asList(
