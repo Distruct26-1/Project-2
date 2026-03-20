@@ -96,12 +96,14 @@ https://github.com/Distruct26-1/Project-2/commit/64dc5a5
 ### Main.java
 Assignee: Cristian
 
-Status: In progress
+Status: Done
+https://github.com/Distruct26-1/Project-2/commit/61210cd0491f3849aa307ce1577cd9a63055d1ba
 
 ### JUnit test suite
 Assignee: Dallin
 
-Status: In progress
+Status: Done
+https://github.com/Distruct26-1/Project-2/commit/5e71a2a0348b146bbbbb50d938056cd52fa8ecf6
 
 ### UML diagram
 Assignee: Kathleen
@@ -122,14 +124,14 @@ Status: Done
 https://github.com/Distruct26-1/Project-2/blob/main/docs/Project_Plan.md
 
 ### Checkpoint 
-Assignee: Kathleen 
+Assignee: Kathleen
 
 Status: In Progress
 
 ### Discussion questions (6 analysis questions)
 Assignee: Dallin
 
-Status: Not Started
+Status: Done
 
 ### Final report
 Assignee: Kathleen
@@ -139,7 +141,7 @@ Status: In progress
 ### Team video
 Assignee: Cristian
 
-Status: Not Started
+Status: In progress
 
 ## Update Log
 | Date | Summary | Link |
