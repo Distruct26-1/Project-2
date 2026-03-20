@@ -93,19 +93,19 @@ public class MultiSets {
 	}
 
 	public static void main(String[] args) {
-		String[] orderA = {
-			"Beer",
-			"Beer",
-			"Beer",
-			"Beer",
-			"Margarita",
-			"Diet Coke",
-			"Diet Coke",
-			"Sparkling Water",
-			"Sparkling Water",
-			"Mimosa",
-			"Mimosa"
-		};
+		// String[] orderA = {
+		// 	"Beer",
+		// 	"Beer",
+		// 	"Beer",
+		// 	"Beer",
+		// 	"Margarita",
+		// 	"Diet Coke",
+		// 	"Diet Coke",
+		// 	"Sparkling Water",
+		// 	"Sparkling Water",
+		// 	"Mimosa",
+		// 	"Mimosa"
+		// };
 		
 		String[] orderB = {
 			"Beer",
@@ -134,7 +134,7 @@ public class MultiSets {
 			"Bloody Mary"
 		};
 		
-		Multiset<String> SatNightOrder  = createFromOrders(orderA);
+		// Multiset<String> SatNightOrder  = createFromOrders(orderA);
 		Multiset<String> SunBrunchOrder = createFromOrders(orderB);
 		Multiset<String> StoneColdOrder = createFromOrders(orderSC);
 		
