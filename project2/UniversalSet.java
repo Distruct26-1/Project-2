@@ -6,7 +6,7 @@ Semester: Spring 2026
 Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
 */
 
-package project2;
+// package project2;
 
 import java.util.ArrayList;
 import java.util.List;

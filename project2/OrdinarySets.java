@@ -6,7 +6,7 @@ Semester: Spring 2026
 Project: Programming Project 2 – Sets, Multisets, and Natural-Language Queries
 */
 
-package project2;
+// package project2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,13 +15,10 @@ import java.util.List;
 public class OrdinarySets {
 	
 	private UniversalSet ingredients;
-	
 	private boolean[] contains;
 	
 	//Constructor
-	
 	public OrdinarySets(UniversalSet ingredients) {
-		
 		this.ingredients = ingredients;
 		
 		// Length must match universe size.
