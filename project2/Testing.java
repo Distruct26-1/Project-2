@@ -3,11 +3,9 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 import java.util.Arrays;
-import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -416,7 +414,7 @@ public class Testing {
 
         assertTrue(difference.contains("Lager x 4"));
         assertTrue(difference.contains("Margarita,"));
-        
+
         assertFalse(difference.contains("Diet Coke"));
         assertFalse(difference.contains("Mimosa"));
     }
@@ -448,4 +446,181 @@ public class Testing {
         assertTrue(sum.contains("Mimosa x 2"));
     }
 
+    @Test
+    public void multisetUnionEmpty() {
+        Multiset<String> set = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> empty = HashMultiset.create(Arrays.asList());
+
+		String union = HashMultiset.create(MultiSets.union(set, empty)).toString();
+
+        assertTrue(union.contains("Beer x 4"));
+        assertTrue(union.contains("Diet Coke,"));
+    }
+
+    @Test
+    public void multisetIntersectionEmpty() {
+        Multiset<String> set = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> empty = HashMultiset.create(Arrays.asList());
+
+		String intersection = HashMultiset.create(MultiSets.intersection(set, empty)).toString();
+
+        assertEquals(intersection, "[]");;
+    }
+
+    @Test
+    public void multisetDifferenceEmpty() {
+        Multiset<String> set = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> empty = HashMultiset.create(Arrays.asList());
+
+		String sum = HashMultiset.create(MultiSets.sum(set, empty)).toString();
+
+        assertTrue(sum.contains("Beer x 4"));
+        assertTrue(sum.contains("Diet Coke,"));
+    }
+
+    @Test
+    public void multisetSumEmpty() {
+        Multiset<String> set = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> empty = HashMultiset.create(Arrays.asList());
+
+		String sum = HashMultiset.create(MultiSets.sum(set, empty)).toString();
+
+        assertTrue(sum.contains("Beer x 4"));
+        assertTrue(sum.contains("Diet Coke,"));
+    }
+
+    @Test
+    public void multisetUnionDuplicate() {
+        Multiset<String> first = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> second = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+		String union = HashMultiset.create(MultiSets.union(first, second)).toString();
+
+        assertTrue(union.contains("Beer x 4"));
+        assertTrue(union.contains("Diet Coke,"));
+    }
+
+    @Test
+    public void multisetIntersectionDuplicate() {
+        Multiset<String> first = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> second = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+		String intersection = HashMultiset.create(MultiSets.intersection(first, second)).toString();
+
+        assertTrue(intersection.contains("Beer x 4"));
+        assertTrue(intersection.contains("Diet Coke,"));
+    }
+
+    @Test
+    public void multisetDifferenceDuplicate() {
+        Multiset<String> first = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> second = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+		String difference = HashMultiset.create(MultiSets.difference(first, second)).toString();
+
+        assertEquals(difference, "[]");
+    }
+
+    @Test
+    public void multisetSumDuplicate() {
+        Multiset<String> first = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+        Multiset<String> second = HashMultiset.create(Arrays.asList(
+			"Beer", "Beer", "Beer",
+			"Beer", "Bloody Mary",
+			"IPA", "IPA", "Diet Coke",
+			"Margarita", "Margarita",
+			"Lager", "Lager",
+			"Lager", "Lager"
+		));
+
+		String sum = HashMultiset.create(MultiSets.sum(first, second)).toString();
+
+        assertTrue(sum.contains("Beer x 8"));
+        assertTrue(sum.contains("Diet Coke x 2"));
+    }
 }
