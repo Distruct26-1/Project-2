@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/agnes/Downloads/guava-33.0.0-jre.jar"/>
+	<classpathentry kind="lib" path="/home/dallin/Programs/Java/guava-33.5.0-jre.jar"/>
+	<classpathentry kind="lib" path="/home/dallin/Programs/Java/failureaccess-1.0.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

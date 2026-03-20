@@ -20,7 +20,6 @@ public class Main {
 		
 		// Creating the UNIVERSAL SET.
 		// This is the full list of ingredients that exist in our system.
-		
 		UniversalSet uniIngredients = new UniversalSet(Arrays.asList(
 				"lime juice", "simple syrup", "bitters", "olives", 
 				"bloody mary mix", "sweet vermouth", "soda water", 
@@ -29,13 +28,19 @@ public class Main {
 		// Creating Set A.
         // This represents the ingredients used in the drink Old Fashioned.
         // The method fromIngredients() converts the ingredient names into a Boolean array.
-		
-		OrdinarySets OldFashioned = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList("simple syrup", "bitters", "whiskey"));
+		OrdinarySets OldFashioned = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList(
+			"simple syrup",
+			"bitters",
+			"whiskey"
+		));
 		
 		// Creating Set B.
         // This represents the ingredients used in the drink Margarita.
-		
-		OrdinarySets Margarita = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList("lime juice", "simple syrup", "tequila"));
+		OrdinarySets Margarita = OrdinarySets.fromIngredients(uniIngredients, Arrays.asList(
+			"lime juice",
+			"simple syrup",
+			"tequila"
+		));
 		
 		// Creating Set C.
 		// This represents the ingredients used in the drink Vodka Tonic.
@@ -44,7 +49,6 @@ public class Main {
 		
 		// Printing the universal set so we know the order of the ingredients.
         // The order matters because each position corresponds to a bit in the bit string.
-		
 		System.out.println("Universal Set (all possible ingredients)");
 		System.out.println(uniIngredients);
 		
